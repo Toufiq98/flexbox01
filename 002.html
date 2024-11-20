@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Sono:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: "Sono";
+    }
+    .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+    } 
+    .pricing-plan {
+        flex: 1;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .plan-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .plan-price {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .plan-feature {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .plan-feature li{
+        margin-bottom: 20px;
+    }
+    .planbutton {
+      padding: 10px;
+      background-color: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+    }
+    @media (max-width: 1250px) {
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+
+</style>
+<body>
+    <div class="pricing-container">
+        <div class="pricing-plan">
+            <div class="plan-title">Basic</div>
+            <div class="plan-price">535Tk/Month</div>
+            <ul class="plan-feature">
+                <li>10GB Storage</li>
+                <li>Single User</li>
+                <li>No Support</li>
+                <button class="planbutton">Sign Up</button>
+            </ul>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-title">Standard</div>
+            <div class="plan-price">835Tk/Month</div>
+            <ul class="plan-feature">
+                <li>20GB Storage</li>
+                <li>Dual User</li>
+                <li>Phone and E-mail Support</li>
+                <button class="planbutton">Sign Up</button>
+            </ul>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-title">Advance</div>
+            <div class="plan-price">1035Tk/Month</div>
+            <ul class="plan-feature">
+                <li>30GB Storage</li>
+                <li>Four User</li>
+                <li>24/7 Support</li>
+                <button class="planbutton">Sign Up</button>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
